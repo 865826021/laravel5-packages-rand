@@ -17,5 +17,29 @@ composer require yuxiaoyang/rander
 
 ```php
 //Illuminate\Hashing\HashServiceProvider::class,
+
 Yuxiaoyang\Rander\RanderProvider::class,
 ```
+控制器中使用 `IndexController.php` :
+
+```php
+
+<?php
+
+
+use \Yuxiaoyang\Rander\Rander;
+
+class IndexController extends Controller
+{
+    public $rand;
+
+
+    public function index(Request $request)
+    {
+        //$this->rand = new \Yuxiaoyang\Rander\Rander();
+        $this->rand = new Rander();
+        echo $this->rand->make(5);
+        return view('home.index');
+    }
+
+}
