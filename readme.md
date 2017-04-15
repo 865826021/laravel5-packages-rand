@@ -38,6 +38,7 @@ class IndexController extends Controller
     {
         //$this->rand = new \Yuxiaoyang\Rander\Rander();
         $this->rand = new Rander();
+        //make($num)  $num为需要生成的字符串长度
         echo $this->rand->make(5);
     }
 
