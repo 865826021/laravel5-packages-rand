@@ -39,7 +39,6 @@ class IndexController extends Controller
         //$this->rand = new \Yuxiaoyang\Rander\Rander();
         $this->rand = new Rander();
         echo $this->rand->make(5);
-        return view('home.index');
     }
 
 }
